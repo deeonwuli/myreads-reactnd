@@ -26,12 +26,11 @@ function BooksApp () {
       console.log(books);
     });
     const updatedBooks = myBooks.map((myBook) => {
-        if (myBook.id === book.id) {
-          myBook.shelf = shelf;
-        } 
-        return myBook
-      }
-    )
+      if (myBook.id === book.id) {
+        myBook.shelf = shelf;
+      } 
+      return myBook
+    })
     setMyBooks(updatedBooks)
   }
 
@@ -47,7 +46,15 @@ function BooksApp () {
           />
         )}
       />
-      <Route path="/search" component={Search}></Route>
+      <Route 
+        path="/search" 
+        render={() => (
+          <Search
+            myBooks={myBooks}
+            onSwitch={switchBook}
+          />
+        )}
+      />
     </div>
   )
 }

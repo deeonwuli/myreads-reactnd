@@ -119,6 +119,12 @@ button:active {
   padding: 80px 10px 20px;
 }
 
+.search-books-results>p {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-left: 3rem;
+}
+
 /* books grid */
 
 .books-grid {

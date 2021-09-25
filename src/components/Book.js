@@ -10,7 +10,13 @@ export default function Book(props) {
         <BookshelfChanger book={book} shelf={shelf} onSwitch={onSwitch} />
       </div>
       <div className="book-title">{book.title}</div>
-      <div className="book-authors">{book.authors[0]}</div>
+      {book.authors && 
+        book.authors.map((author, index) => (
+          <div className="book-authors" key={index}>
+            {author}
+          </div>
+        ))
+      }
     </div>
   )
 }
