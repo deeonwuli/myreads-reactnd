@@ -181,6 +181,12 @@ button:active {
   color: #999;
 }
 
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .book-top {
   position: relative;
   height: 200px;
