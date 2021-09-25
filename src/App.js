@@ -25,12 +25,14 @@ function BooksApp () {
     BooksAPI.update(book, shelf).then((books) => {
       console.log(books);
     });
-    const updatedBooks = myBooks.map((myBook) => {
-      if (myBook.id === book.id) {
-        myBook.shelf = shelf;
-      } 
-      return myBook
-    })
+    let updatedBooks = []
+    updatedBooks = myBooks.filter((myBook) => 
+      myBook.id !== book.id
+    )
+    if (shelf !== 'none') {
+      book.shelf = shelf;
+      updatedBooks = updatedBooks.concat(book)
+    }
     setMyBooks(updatedBooks)
   }
 
