@@ -36,6 +36,16 @@ function BooksApp () {
     setMyBooks(updatedBooks)
   }
 
+  console.log(myBooks)
+
+  if (!myBooks.length) {
+    return (
+      <div className="loader-container">
+        <div className="loader"></div>
+      </div>
+    )
+  }
+
   return (
     <div className="app">
       <Route 
