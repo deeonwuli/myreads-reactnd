@@ -228,3 +228,70 @@ button:active {
   text-align: center;
   font-size: 0.8em;
 }
+
+/* Modal */
+
+.modal-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  overflow: auto;
+}
+
+.modal {
+  background-color: #ffffff;
+  border: 5px solid #2e7c31;
+  margin: auto;
+  height: auto;
+  width: auto;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal > button {
+  border: none;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-bottom: 0.5rem;
+}
+
+.modal > button:after {
+  content: "\00d7";
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.modal > .modal-title {
+  font-weight: 600;
+  line-height: 0;
+  font-size: 1rem;
+}
+
+.modal-bottom {
+  font-size: 0.8rem;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-categories {
+  font-size: 0.8rem;
+  color: #999;
+  font-style: italic;
+}
