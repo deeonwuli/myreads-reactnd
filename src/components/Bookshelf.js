@@ -10,7 +10,7 @@ export default function Bookshelf (props) {
       <div className="bookshelf-books">
         <ol className="books-grid">
           {booksOnShelf.map((book) => (
-            <Book key={book.id} book={book} shelf={shelf} onSwitch={onSwitch} />
+            <Book key={book.id} book={book} shelf={shelf.key} onSwitch={onSwitch} />
           ))}
         </ol>
       </div>

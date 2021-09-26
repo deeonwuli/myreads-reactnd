@@ -51,7 +51,7 @@ function BooksApp () {
         <Home bookshelves={bookshelves} books={myBooks} onSwitch={switchBook} />
       </Route>
       <Route path="/search">
-        <Search myBooks={myBooks} onSwitch={switchBook} />
+        <Search myBooks={myBooks} onSwitch={switchBook} bookshelves={bookshelves} />
       </Route>
     </div>;
 }
