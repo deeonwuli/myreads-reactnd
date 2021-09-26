@@ -18,7 +18,19 @@ export default function Book(props) {
 
   return <div className="book">
       <div className="book-top">
-        <div className="book-cover" onClick={handleOpen} style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.smallThumbnail})` }} />
+        <div 
+          className="book-cover" 
+          onClick={handleOpen} 
+          style={{ 
+            width: 128, 
+            height: 193, 
+            backgroundImage: `url(${
+             book.imageLinks
+              ? book.imageLinks.smallThumbnail
+              : ''
+            })` 
+          }} 
+        />
         <BookshelfChanger book={book} shelf={shelf} onSwitch={onSwitch} />
       </div>
       <div className="book-title" onClick={handleOpen}>
