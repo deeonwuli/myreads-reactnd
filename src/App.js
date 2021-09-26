@@ -46,29 +46,14 @@ function BooksApp () {
     )
   }
 
-  return (
-    <div className="app">
-      <Route 
-        exact path="/" 
-        render={() => (
-          <Home 
-            bookshelves={bookshelves}
-            books={myBooks}
-            onSwitch={switchBook}
-          />
-        )}
-      />
-      <Route 
-        path="/search" 
-        render={() => (
-          <Search
-            myBooks={myBooks}
-            onSwitch={switchBook}
-          />
-        )}
-      />
-    </div>
-  )
+  return <div className="app">
+      <Route exact path="/">
+        <Home bookshelves={bookshelves} books={myBooks} onSwitch={switchBook} />
+      </Route>
+      <Route path="/search">
+        <Search myBooks={myBooks} onSwitch={switchBook} />
+      </Route>
+    </div>;
 }
 
 export default BooksApp
