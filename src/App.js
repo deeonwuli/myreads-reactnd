@@ -36,8 +36,6 @@ function BooksApp () {
     setMyBooks(updatedBooks)
   }
 
-  console.log(myBooks)
-
   if (!myBooks.length) {
     return (
       <div className="loader-container">
@@ -51,7 +49,7 @@ function BooksApp () {
         <Home bookshelves={bookshelves} books={myBooks} onSwitch={switchBook} />
       </Route>
       <Route path="/search">
-        <Search myBooks={myBooks} onSwitch={switchBook} bookshelves={bookshelves} />
+        <Search myBooks={myBooks} onSwitch={switchBook} />
       </Route>
     </div>;
 }

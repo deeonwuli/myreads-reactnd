@@ -42,14 +42,17 @@ export default function Search (props) {
           <>
             <p>{updatedBooks.length} results</p>
             <ol className="books-grid">
-              {updatedBooks.map(book => (
-                <Book
-                  key={book.id}
-                  book={book}
-                  shelf={book.shelf ? book.shelf : 'none'}
-                  onSwitch={onSwitch}
-                />
-              ))}
+              {updatedBooks.map(book => {
+                const shelf = props.myBooks.find(b => b.id === book.id);
+                return (
+                  <Book
+                    key={book.id}
+                    book={book}
+                    shelf={shelf ? shelf.shelf : 'none'}
+                    onSwitch={onSwitch}
+                  />
+                )}
+              )}
             </ol>
           </>
         )}
